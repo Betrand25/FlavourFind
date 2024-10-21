@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="GiveReview.css">
+    <script src="Validasi.js" defer></script>
+    <script src="Star.js"></script>
+    <title>FlavorFind (Menu)</title>
+</head>
+<body>
+
+    <header>
+        <div class="back-icon" onclick="location.href='Review.html'">
+            <img src="Foto/iKON/icons8-back-50.png" alt="Back Icon">
+        </div>
+        <div class="restaurant-image-container">
+            <img src="Foto/Chicken/wingstop.png" alt="Wingstop Chicken" class="restaurant-image">
+        </div>
+        <div class="restaurant-details">
+            <div class="restaurant-info">
+                <h1>WingStop Chicken - Living World <img src="Foto/iKON/Logo-removebg-preview.png" alt="Logo Icon" class="restaurant-icon"></h1>
+                <p>Crispy Fried Chicken, comes with 9 flavour choices</p>
+            </div>
+            <div id="header-rating" class="rating-container">
+                <span class="rating-star">★</span>
+                <span class="rating-score">0.0</span>
+                <span class="rating-price"><span class="active">$$$</span><span>$</span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="centered-section">
+        <div class="rating-sections">
+            <div class="rating-section">
+                <h2 class="name">Food</h2>
+                <div class="stars food-stars">
+                    <span class="star" data-index="0">★</span>
+                    <span class="star" data-index="1">★</span>
+                    <span class="star" data-index="2">★</span>
+                    <span class="star" data-index="3">★</span>
+                    <span class="star" data-index="4">★</span>
+                </div>
+            </div>
+
+            <div class="rating-section">
+                <h2 class="name">Service</h2>
+                <div class="stars service-stars">
+                    <span class="star" data-index="0">★</span>
+                    <span class="star" data-index="1">★</span>
+                    <span class="star" data-index="2">★</span>
+                    <span class="star" data-index="3">★</span>
+                    <span class="star" data-index="4">★</span>
+                </div>
+            </div>
+        </div>
+        <h2 class="name">Restaurant Rating</h2>
+        <div class="stars average-stars">
+            <span class="star" data-index="0">★</span>
+            <span class="star" data-index="1">★</span>
+            <span class="star" data-index="2">★</span>
+            <span class="star" data-index="3">★</span>
+            <span class="star" data-index="4">★</span>
+        </div>
+    </section>
+
+    <section class="centered-section">
+        <h2 class="name">How much did you spend per person?</h2>
+        <div class="spend-options">
+            <button class="spend-option" data-value="Rp 1-25.000">Rp 1-25.000</button>
+            <button class="spend-option" data-value="Rp 25.000-50.000">Rp 25.000-50.000</button>
+            <button class="spend-option" data-value="Rp 50.000-75.000">Rp 50.000-75.000</button>
+            <button class="spend-option add-button">+ Add</button>
+        </div>
+        <input type="text" id="custom-spend" class="spend-input" placeholder="Enter custom amount" style="display:none;">
+    </section>
+
+    <section class="centered-section">
+        <textarea id="comment" class="comment-box" placeholder="Share details of your own experience at this place" maxlength="1000"></textarea>
+        <div class="uploaded-photos"></div>
+        <button class="upload-button">
+            <img src="Foto/iKON/icons8-photo-30.png" alt="Add Photo & Video"> Add Photo & Video
+        </button>
+        <input type="file" id="file-input" accept="image/*,video/*" style="display:none;">
+    </section>
+
+    <div class="submit-button-container">
+        <button class="submit-button" onclick="submitReview()">Public</button>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about-us">
+                <h2>About Us</h2>
+                <p>At Flavor Find, we are passionate about exploring and sharing the diverse culinary treasures found in every corner of Indonesia. Our mission is to offer more than just a guide to delicious food; we aim to provide unforgettable dining experiences through our comprehensive reviews.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Category.html">Category</a></li>
+                    <li><a href="JoinWithUs.html">Join With Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-us">
+                <h3>Contact Us</h3>
+                <form>
+                    <textarea id="message" placeholder="Your Message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-media">
+                <a href="#"><img src="Foto/iKON/icons8-instagram-50 (1).png" alt="Instagram"></a>
+                <a href="#"><img src="Foto/iKON/icons8-twitter-50 (1).png" alt="Twitter"></a>
+                <a href="#"><img src="Foto/iKON/icons8-facebook-50.png" alt="Facebook"></a>
+            </div>
+            <p>FlavorFind.com | Designed by Group 2</p>
+        </div>
+    </footer>
+</body>
+</html>

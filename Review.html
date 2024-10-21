@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Review.css">
+    <script src="Star.js" defer></script>
+    <title>FlavorFind (Review)</title>
+</head>
+<body>
+    <header>
+        <div class="back-icon" onclick="location.href='Chicken.html'">
+            <img src="Foto/iKON/icons8-back-50.png" alt="Back Icon">
+        </div>
+        <div class="restaurant-image-container">
+            <img src="Foto/Chicken/wingstop.png" alt="Wingstop Chicken" class="restaurant-image">
+        </div>
+        <div class="restaurant-details">
+            <div class="restaurant-info">
+                <h1>WingStop Chicken - Living World <img src="Foto/iKON/Logo-removebg-preview.png" alt="Logo Icon" class="restaurant-icon"></h1>
+                <p>Crispy Fried Chicken, comes with 9 flavour choices</p>
+            </div>
+            <div id="header-rating" class="rating-container">
+                <span class="rating-star">★</span>
+                <span class="rating-score">0.0</span>
+                <span class="rating-price"><span class="active">$$$</span><span>$</span></span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation-menu">
+        <ul>
+            <li><a href="Overview.html">Overview</a></li>
+            <li><a href="Menu.html">Menu</a></li>
+            <li class="active"><a href="Review.html">Review</a></li>
+        </ul>
+    </nav>
+
+    <section class="announcement">
+        <div class="announcement-container">
+            <img src="Foto/iKON/Logo-removebg-preview2.png" alt="Award Icon" class="announcement-icon">
+            <p>"We did it! Wingstop is honored with the Best FlavorFind award. Come taste why!"</p>
+        </div>
+    </section>
+
+    <section class="rate-review">
+        <h2>Rate and Review</h2>
+        <div id="user-name" class="user-name"></div>
+        <div class="stars">
+            <img src="Foto/iKON/icons8-star-50.png" alt="Star 1" class="star" onclick="redirectToReviewPage()">
+            <img src="Foto/iKON/icons8-star-50.png" alt="Star 2" class="star" onclick="redirectToReviewPage()">
+            <img src="Foto/iKON/icons8-star-50.png" alt="Star 3" class="star" onclick="redirectToReviewPage()">
+            <img src="Foto/iKON/icons8-star-50.png" alt="Star 4" class="star" onclick="redirectToReviewPage()">
+            <img src="Foto/iKON/icons8-star-50.png" alt="Star 5" class="star" onclick="redirectToReviewPage()">
+        </div>
+    </section>
+
+    <section class="give-review">
+        <div class="review-box">
+            <div id="user-reviews-container"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about-us">
+                <h2>About Us</h2>
+                <p>At Flavor Find, we are passionate about exploring and sharing the diverse culinary treasures found in every corner of Indonesia. Our mission is to offer more than just a guide to delicious food; we aim to provide unforgettable dining experiences through our comprehensive reviews.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Category.html">Category</a></li>
+                    <li><a href="JoinWithUs.html">Join With Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-us">
+                <h3>Contact Us</h3>
+                <form>
+                    <textarea id="message" placeholder="Your Message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-media">
+                <a href="#"><img src="Foto/iKON/icons8-instagram-50 (1).png" alt="Instagram"></a>
+                <a href="#"><img src="Foto/iKON/icons8-twitter-50 (1).png" alt="Twitter"></a>
+                <a href="#"><img src="Foto/iKON/icons8-facebook-50.png" alt="Facebook"></a>
+            </div>
+            <p>FlavorFind.com | Designed by Group 2</p>
+        </div>
+    </footer>
+
+    <script>
+        function redirectToReviewPage() {
+            const loggedInEmail = localStorage.getItem('loggedInEmail');
+            if (!loggedInEmail) {
+                alert('Please login to give a review.');
+                window.location.href = 'Login.html';
+            } else {
+                window.location.href = 'GiveReview.html';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            const userReviewsContainer = document.getElementById('user-reviews-container');
+            const loggedInEmail = localStorage.getItem('loggedInEmail');
+            const firstName = localStorage.getItem('firstName');
+
+            if (loggedInEmail && firstName) {
+                const userNameElement = document.getElementById('user-name');
+                userNameElement.textContent = `Hello, ${firstName}`;
+            }
+
+            reviews.forEach((review, index) => {
+                const reviewContent = document.createElement('div');
+                reviewContent.className = 'review-content';
+                reviewContent.id = `review-${index}`;
+                reviewContent.innerHTML = `
+                    <div class="review-author">${review.author || 'Anonymous'}</div>
+                    <div class="review-stars">
+                        ${Array.from({ length: 5 }).map((_, i) => `<span class="star${i < review.averageRating ? ' active' : ''}">★</span>`).join('')}
+                    </div>
+                    <p>Spend: ${review.spend}</p>
+                    <p>${review.comment}</p>
+                    <div class="uploaded-photos">
+                        ${review.photos.map(photo => `<img src="${photo}" style="max-width: 300px; max-height: 300px; border: 2px solid #4998E3; border-radius: 5px;">`).join('')}
+                    </div>
+                `;
+                userReviewsContainer.prepend(reviewContent);
+            });
+        });
+    </script>
+</body>
+</html>

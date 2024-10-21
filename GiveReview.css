@@ -1,0 +1,396 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #FFEB3B;
+    padding: 10px;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-bottom: 4px dashed #4998E3;
+}
+
+.back-icon {
+    cursor: pointer;
+    padding: 0px;
+}
+
+.back-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.restaurant-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.restaurant-image {
+    width: 800px;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.restaurant-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.restaurant-info {
+    text-align: left;
+}
+
+.restaurant-info h1 {
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: #076633;
+    font-weight: bold;
+}
+
+.restaurant-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    color: #076633;
+}
+
+.restaurant-info p {
+    color: #666;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+
+.rating-star {
+    color: #FFD700;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.rating-score {
+    font-size: 20px;
+    color: #076633;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.rating-price {
+    font-size: 18px;
+}
+
+.rating-price .active {
+    color: #076633;
+}
+
+.rating-price span:not(.active) {
+    color: #A9A9A9;
+}
+
+
+.centered-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.rating-sections {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.rating-section {
+    text-align: center;
+}
+
+.name {
+    color: #076633;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.dashed-line {
+    width: 100%;
+    height: 2px;
+    border-bottom: 4px dashed #4998E3;
+    margin: 10px 0;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    padding: 10px 0;
+}
+
+.star {
+    font-size: 45px;
+    cursor: pointer;
+    color: #A9A9A9; /* Default color */
+}
+
+.star.active {
+    color: #FFD700; /* Yellow color */
+}
+
+.top-line {
+    margin-bottom: 10px;
+}
+
+.bottom-line {
+    margin-top: 10px;
+}
+
+.spend-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.spend-option {
+    padding: 10px 20px;
+    border: 2px solid #4998E3;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.spend-option:hover {
+    border-color: #0066CC;
+}
+
+.spend-option.selected {
+    background-color: #4998E3;
+    color: #fff;
+}
+
+.add-button {
+    border-color: #0066CC;
+    color: #0066CC;
+}
+
+.spend-input {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #0066CC;
+    border-radius: 5px;
+    width: calc(100% - 40px);
+    max-width: 300px;
+}
+
+.comment-box {
+    width: 80%;
+    height: 150px;
+    border: 2px solid #076633;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.upload-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #076633;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #076633;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 16px;
+    margin-left: 600px;
+}
+
+.upload-button:hover {
+    border-color: #0066CC;
+    background-color: #f0f0f0;
+}
+
+.upload-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.uploaded-photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.uploaded-photos img {
+    max-width: 100px;
+    max-height: 100px;
+    border: 2px solid #4998E3;
+    border-radius: 5px;
+}
+
+.submit-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    border: 2px solid #076633;
+    border-radius: 5px;
+    background-color: #076633;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.submit-button:hover {
+    background-color: #005bb5;
+}
+
+footer {
+    background-color: #FFEB3B;
+    padding: 40px 20px;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: bold;
+    margin-left: 100px;
+}
+
+.footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: bold;
+}
+
+.footer-section p {
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 100px;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.footer-section ul li a:hover {
+    color: #4998E3;
+}
+
+.footer-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-section textarea {
+    resize: none;
+    padding: 10px;
+    height: 100px;
+    border-radius: 5px;
+    border: 4px solid #000;
+}
+
+.footer-section button {
+    padding: 10px;
+    border: 4px solid #000;
+    border-radius: 5px;
+    background-color: #0066CC;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.footer-section button:hover {
+    background-color: #005bb5;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    order: 1;
+    width: 100%;
+    justify-content: center;
+}
+
+.social-media a img {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9em;
+    order: 2;
+    width: 100%;
+    text-align: center;
+}

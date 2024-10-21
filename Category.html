@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Category.css">
+    <script src="Home.js"></script>
+    <title>FlavorFind (Category)</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Foto/iKON/Logo-removebg-preview2.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Category.html" class="active">Category</a></li>
+                <li><a href="JoinWithUs.html">Join With Us</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="Login.html" class="login-button">Login</a>
+            <a href="SignIn.html" class="signin-button">Sign In</a>
+        </div>
+        <div class="welcome-message-container"></div>
+    </header>
+
+    <section class="search-section">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search your food category">
+            <button class="search-button" onclick="focusSearchInput()">
+                <img src="Foto/iKON/icons8-search-50.png" alt="Search Icon">
+            </button>
+        </div>
+    </section>
+
+    <section class="next-section">
+        <div class="next-section-text">
+            <div class="next-section-main-text">
+                <h1>Food <span class="highlight">Category</span>, Your</h1>
+                <h1><span class="highlight2">Choice</span></h1>
+            </div>
+            <div class="next-section-sub-text">
+                <p>Offering More Than Just Delicious Food,</p>
+                <p>But An Unforgettable Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="food-categories">
+        <div class="category" onclick="navigateToPage('Chicken.html')">
+            <div class="category-image">
+                <img src="Foto/FoodPhotoHome/Marion_s_Kitchen___Bringing_the_Best_Flavours_of_Asia_to_Home_Kitchens-removebg-preview.png" alt="Chicken">
+            </div>
+            <p>Chicken</p>
+        </div>
+        <div class="category" onclick="navigateToPage('indonesia.html')">
+            <div class="category-image">
+                <img src="Foto/FoodPhotoHome/Soto_Ayam_Recipe__Indonesian_Chicken_Soup_with_Vermicelli_-removebg-preview.png" alt="Indonesia">
+            </div>
+            <p>Indonesia</p>
+        </div>
+        <div class="category" onclick="navigateToPage('fastfood.html')">
+            <div class="category-image">
+                <img src="Foto/FoodPhotoHome/abf795a4a36f244d7217aac7aa1c623a-removebg-preview.png" alt="Fast Food">
+            </div>
+            <p>Fast Food</p>
+        </div>
+    </section>
+    <section class="food-categories">
+        <div class="category" onclick="navigateToPage('rice.html')">
+            <div class="category-image">
+                <img src="Foto/FoodPhotoHome/Nasi_Goreng_-_Indonesian_Fried_Rice-removebg-preview.png" alt="Rice">
+            </div>
+            <p>Rice</p>
+        </div>
+        <div class="category" onclick="navigateToPage('healthy.html')">
+            <div class="category-image">
+                <img src="Foto/FoodPhotoHome/_pinterest__laurenchiangg-removebg-preview.png" alt="Healthy">
+            </div>
+            <p>Healthy</p>
+        </div>
+        <div class="category" onclick="navigateToPage('dessert.html')">
+            <div class="category-image">
+                <img src="Foto/FoodPhotoHome/9e41ddff931ba19bc3082be33c1bc7c6-removebg-preview.png" alt="Dessert">
+            </div>
+            <p>Dessert</p>
+        </div>
+    </section>
+    <section class="food-categories">
+        <div class="category" onclick="navigateToPage('japanese.html')">
+            <div class="category-image">
+                <img src="Foto/FoodPhotoHome/Sushi-removebg-preview.png" alt="Japanese Food">
+            </div>
+            <p>Japanese Food</p>
+        </div>
+        <div class="category" onclick="navigateToPage('korean.html')">
+            <div class="category-image">
+                <img src="Foto/FoodPhotoHome/download__3_-removebg-preview.png" alt="Korean Food">
+            </div>
+            <p>Korean Food</p>
+        </div>
+        <div class="category" onclick="navigateToPage('noodles.html')">
+            <div class="category-image">
+                <img src="Foto/FoodPhotoHome/32b990081091ce2a3d4d116699a72803-removebg-preview.png" alt="Noodles">
+            </div>
+            <p>Noodles</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about-us">
+                <h2>About Us</h2>
+                <p>At Flavor Find, we are passionate about exploring and sharing the diverse culinary treasures found in every corner of Indonesia. Our mission is to offer more than just a guide to delicious food; we aim to provide unforgettable dining experiences through our comprehensive reviews.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Category.html">Category</a></li>
+                    <li><a href="JoinWithUs.html">Join With Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-us">
+                <h3>Contact Us</h3>
+                <form>
+                    <textarea id="message" placeholder="Your Message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-media">
+                <a href="#"><img src="Foto/iKON/icons8-instagram-50 (1).png" alt="Instagram"></a>
+                <a href="#"><img src="Foto/iKON/icons8-twitter-50 (1).png" alt="Twitter"></a>
+                <a href="#"><img src="Foto/iKON/icons8-facebook-50.png" alt="Facebook"></a>
+            </div>
+            <p>FlavorFind.com | Designed by Group 2</p>
+        </div>
+    </footer>
+
+    <script>
+        function focusSearchInput() {
+            document.getElementById('search-input').focus();
+        }
+
+        document.getElementById('search-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                this.value = '';
+            }
+        });
+
+        function navigateToPage(url) {
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+</html>
